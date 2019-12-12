@@ -89,6 +89,19 @@ header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-s
     padding: 10px;
 }
 
+.left ul li p a {
+    text-decoration: none;
+    color: black;
+}
+
+.left ul li p a:hover {
+    color: blue;
+}
+
+.left ul li h6 {
+    margin-bottom: 20px;
+}
+
 /* .socmed {
     background-color: white;
     border-radius: 10px;
@@ -142,7 +155,7 @@ header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-s
 }
 
 .list-berita-head {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: black;
 }
 
@@ -160,6 +173,16 @@ header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-s
     width: 100%;
     border-radius: 10px;
 }
+
+.list-berita ul li {
+    display: inline;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* .seeall {
+    margin-left: 550px;
+} */
 
 .list-berita ul li a {
     text-decoration: none;
@@ -185,6 +208,14 @@ header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-s
 
 .top-news h5{
     font-size: 18px;
+}
+
+.login ul li {
+    border: 1px solid blue;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 /* 

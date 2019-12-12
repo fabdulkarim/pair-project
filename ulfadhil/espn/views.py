@@ -34,8 +34,11 @@ def news(request, new_id):
     return render(request, 'espn/news.html', var)
 
 def scores(request, sportstr):
-    sportstr = sportstr.capitalize()
+    # sportstr2 = sportstr.lower()
     matchs = Match.objects.filter(sport=sportstr).order_by('-takes_time')
+
+    # matchs2 = Match.objects.all()
+    # for j in matchs2
     replace = []
     # packed = namedtuple('packed', ['obj','hp','ap'])
     for i in matchs:
