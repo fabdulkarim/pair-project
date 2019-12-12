@@ -25,7 +25,49 @@
                             <!-- <li><button class="dropbtn"><a href="#"> Dropdown</a></button></li> -->
                             <li>
                                 <div class="dropdown">
-                                    <a href= "#" class="dropbtn">Football</a>
+                                    <a href= "{% url 'espn:sport' 'Football' %}" class="dropbtn">Football</a>
+                                    <div class="dropdown-content">
+                                    <a href="{% url 'espn:scores' 'Football' %}">Scores</a>
+                                    <a href="#">Fixture</a>
+                                    <a href="#">Transfers</a>
+                                    <a href="#">Teams</a>
+                                    <a href="#">League & Cups</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Fantasy</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a href= "{% url 'espn:sport' 'NBA' %}" class="dropbtn">NBA</a>
+                                    <div class="dropdown-content">
+                                    <a href="{% url 'espn:scores' 'NBA' %}">Scores</a>
+                                    <a href="#">Fixture</a>
+                                    <a href="#">Transfers</a>
+                                    <a href="#">Teams</a>
+                                    <a href="#">League & Cups</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Fantasy</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a href= "{% url 'espn:sport' 'NFL' %}" class="dropbtn">NFL</a>
+                                    <div class="dropdown-content">
+                                    <a href="{% url 'espn:scores' 'NFL' %}">Scores</a>
+                                    <a href="#">Fixture</a>
+                                    <a href="#">Transfers</a>
+                                    <a href="#">Teams</a>
+                                    <a href="#">League & Cups</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Fantasy</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a href= "#" class="dropbtn">Cricket</a>
                                     <div class="dropdown-content">
                                     <a href="#">Scores</a>
                                     <a href="#">Fixture</a>
@@ -37,13 +79,48 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- <li><a href="{% url 'espn:sport' 'Football' %}">Football</a></li> -->
-                            <li><a href="{% url 'espn:sport' 'NBA' %}">NBA</a></li>
-                            <li><a href="{% url 'espn:sport' 'NFL' %}">NFL</a></li>
-                            <li><a href="#">Cricket</a></li>
-                            <li><a href="#">Rugby</a></li>
-                            <li><a href="#">Golf</a></li>
-                            <li class="titik"><a href="#">...</a></li>
+                            <li>
+                                <div class="dropdown">
+                                    <a href= "#" class="dropbtn">Rugby</a>
+                                    <div class="dropdown-content">
+                                    <a href="#">Scores</a>
+                                    <a href="#">Fixture</a>
+                                    <a href="#">Transfers</a>
+                                    <a href="#">Teams</a>
+                                    <a href="#">League & Cups</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Fantasy</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a href= "#" class="dropbtn">Golf</a>
+                                    <div class="dropdown-content">
+                                    <a href="#">Scores</a>
+                                    <a href="#">Fixture</a>
+                                    <a href="#">Transfers</a>
+                                    <a href="#">Teams</a>
+                                    <a href="#">League & Cups</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Fantasy</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a href= "#" class="dropbtn titik">...</a>
+                                    <div class="dropdown-content">
+                                    <a href="#">Scores</a>
+                                    <a href="#">Fixture</a>
+                                    <a href="#">Transfers</a>
+                                    <a href="#">Teams</a>
+                                    <a href="#">League & Cups</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Fantasy</a>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
