@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'espn/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'espn/css/bootstrap.min.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container-fluid header-espn">
+            <div class="row align-items-center">
+                <div class="col-md-2 alpha-tech">
+                    <a href="{% url 'index' %}"><img src="https://diskingdom.com/wp-content/uploads/2016/01/image-39.png" alt=""></a>
+                </div>
+                <div class="col-md-7">
+                    <div class="home-header-nav">
+                        <ul class="list-unstyled home-header-nav__list">
+                            <li><a href="{% url 'football' %}">Football</a></li>
+                            <li><a href="{% url 'nba' %}">NBA</a></li>
+                            <li><a href="{% url 'nfl' %}">NFL</a></li>
+                            <li><a href="#">Cricket</a></li>
+                            <li><a href="#">Rugby</a></li>
+                            <li><a href="#">Golf</a></li>
+                            <li class="titik"><a href="#">...</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="home-header-nav">
+                        <ul class="list-unstyled home-header-nav__list">
+                            <li><a href="#">Fantasy</a></li>
+                            <li><a class="dots" href="#"><img src="http://puzzlefry.com/wp-content/uploads/2016/04/Dots-and-Lines-puzzles.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://www.jateng.tv/wp-content/uploads/2019/04/87-872187_lupa-search-icon-white-png.png-copy.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://www.stickpng.com/assets/images/585e4beacb11b227491c3399.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="content-section">
+            {% block section %}
+            {% endblock %}
+        </div>
+    </section>
+    <script src="% static 'espn/js/bootstrap.min.js' %"></script>
+</body>
+</html>

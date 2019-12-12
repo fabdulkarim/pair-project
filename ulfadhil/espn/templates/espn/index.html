@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block section %}
+<div class="container-fluid home">
+    <div class="row align-items-center">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+                {% for new in berita_object %}
+                    <div class="list-berita">                      
+                        <ul class="list-unstyled">
+                            <li><h5>{{new.get_sport_display}}</h5></li>
+                            <li><a href="#">See All</a></li>
+                        </ul>                            
+                        <img src="{{new.media}}" alt="">
+                        <h2><a href="#">{{new.judul}}</a></h2>
+                        {{new.createdat}}
+                    </div>
+                {% endfor %}
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+{% endblock %}
