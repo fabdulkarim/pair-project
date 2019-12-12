@@ -11,12 +11,15 @@ urlpatterns = [
     # path('nfl', views.football, name='nfl'),
     # path('nba', views.nba, name='nba'),
     # path('football/<slug:foo>', views.footballitem, name='footballitem'),
+    path('<str:sportstr>/scoreboard', views.scores, name='scores'),
+    path('<int:new_id>', views.news , name='news'),
     path('<str:sportstr>', views.sport , name='sport'),
 
-    # path('<int:foo>', views.peritem , name='peritem'),
+    path('<str:bar>/<int:foo>', views.peritem , name='peritem'),
 
     # #routing coba
-    path('<int:new_id>', views.news, name='news')
+    
+    path('scores', views.scores, name='scores')
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

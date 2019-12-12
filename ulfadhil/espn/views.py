@@ -1,51 +1,53 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Berita, Detail, Team
-
+from .models import Berita, Detail, Team, Match
+import datetime
+import pytz
+import collections
 # Create your views here.
 def index(request):
     berita_object = Berita.objects.all().order_by('-createdat')
-    return render(request, 'espn/index.html', {'berita_object':berita_object})
-
-# def football(request):
-#     # list_id = Detail.objects.filter(sport='Football').berita_id
-    
-#     football_news = Berita.objects.filter(sport='Football').order_by('createdat')
-
-#     return render(request, 'espn/index.html', {'berita_object':football_news})
-
-# def nfl(request):
-#     # list_id = Detail.objects.filter(sport='Football').berita_id
-    
-#     nfl_news = Berita.objects.filter(sport='NFL').order_by('createdat')
-
-#     return render(request, 'espn/index.html', {'berita_object':nfl_news})
-
-# def nba(request):
-#     # list_id = Detail.objects.filter(sport='Football').berita_id
-    
-#     nba_news = Berita.objects.filter(sport='NBA').order_by('createdat')
-
-#     return render(request, 'espn/index.html', {'berita_object':nba_news})
+    nau = datetime.datetime.now(pytz.utc)
+    return render(request, 'espn/index.html', {'berita_object':berita_object,'nau':nau})
 
 def sport(request, sportstr):
+    
+    sportstr = sportstr.capitalize()
     sport_news = Berita.objects.filter(sport=sportstr).order_by('-createdat')
+    nau = datetime.datetime.now(pytz.utc)
 
-    return render(request, 'espn/index.html', {'berita_object':sport_news})
+    return render(request, 'espn/index.html', {'berita_object':sport_news,'nau':nau})
 
-def peritem(request, foo):
-    # pembatas = Berita.objects.get(link=foo).id
-    # peritem_news = Berita.objects.filter(sport=bar).filter(id__lte=foo).order_by('-createdat')
-    peritem_news = Berita.objects.filter(id__lte=foo).order_by('-createdat')
-    print(foo)
-    peritem_news = Berita.objects.get(pk=foo)
-    print(peritem_news)
-    return render(request, 'news.html', {'baru':peritem_news})
+def peritem(request, bar, foo):
 
-# def slugify(arr1):
-#     return '-'.join(arr.split(' ')).lower()
+    nau = datetime.datetime.now(pytz.utc)
+    
+    peritem_news = Berita.objects.filter(sport=bar).filter(id__lte=foo).order_by('-createdat')
+    
+    return render(request, 'espn/index.html', {'berita_object':peritem_news,'nau':nau})
+
 
 def news(request, new_id):
-    new = Berita.objects.get(pk=new_id)
-    var = {'new' : new}
+    berita_object = Berita.objects.all().order_by('-createdat')
+    newdetail = Berita.objects.get(pk=new_id)
+    var = {'baru':newdetail, 'beritas' : berita_object}
     return render(request, 'espn/news.html', var)
+
+def scores(request, sportstr):
+    sportstr = sportstr.capitalize()
+    matchs = Match.objects.filter(sport=sportstr).order_by('-takes_time')
+    replace = []
+    # packed = namedtuple('packed', ['obj','hp','ap'])
+    for i in matchs:
+        #print(i.home_team_id)
+        dict_ref = {
+            'i': i,
+            'h': i.home_team_id.team_image,
+            'a': i.away_team_id.team_image
+        }
+        h_pic = i.home_team_id.team_image
+        a_pic = i.away_team_id.team_image
+        # p = packed(i,h_pic,a_pic)
+        replace.append(dict_ref)
+    var = {'matchs' : replace,'sportstr':sportstr}
+    return render(request, 'espn/score.html', var)

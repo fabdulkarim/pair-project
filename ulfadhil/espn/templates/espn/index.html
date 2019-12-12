@@ -13,39 +13,30 @@ Home
                 <ul class="list-unstyled">
                     <li><h6>Quick Links</h6></li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">Premiere League</a></p>
                     </li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">Fantasy Basketball: Sign Up</a></p>
                     </li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">ESPN CricInfo</a></p>
                     </li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">NBA Trade Machine</a></p>
                     </li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">College Bowl Schedule</a></p>
                     </li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">ESPN Daily Podcast</a></p>
                     </li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">NFL Playoff Machine</a></p>
                     </li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">NBA Trade Machine</a></p>
                     </li>
                     <li>
-                        <!-- <img src="https://img.panditfootball.com/large/others/Premier%20League%20Logo.png" alt=""> -->
                         <p><a href="#">MLB Winter Meetings</a></p>
                     </li>
                 </ul>
@@ -116,8 +107,6 @@ Home
                             <li><p><a href="#">Instagram</a></p></li>
                         </ul>
                     </li>
-   
-
             </ul>
         </div> 
     
@@ -132,13 +121,26 @@ Home
                     </ul>
                     <div class="list-berita-border">                              
                         <img src="{{new.media}}" alt="">
-                        <h4><a href="{% url 'espn:news' new.id %}">{{new.judul}}</a></h4>
-                        {{new.createdat}}
+                        <h4><a href="{% url 'espn:peritem' new.sport new.id %}">{{new.judul}}</a></h4>
+                        {{ new.createdat|timesince:nau }}
                     </div>    
                 </div>
             {% endfor %}
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <div class="quick-links left">
+                <ul class="list-unstyled">
+                    <li><h6>Top Headlines</h6></li>
+                    <li><p><a href="#">headline 1</a></p></li>
+                    <li><p><a href="#">headline 2</a></p></li>
+                    <li><p><a href="#">headline 3</a></p></li>
+                    <li><p><a href="#">headline 4</a></p></li>
+                    <li><p><a href="#">headline 5</a></p></li>
+                    <li><p><a href="#">headline 6</a></p></li>
+                    <li><p><a href="#">headline 7</a></p></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
