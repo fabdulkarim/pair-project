@@ -7,22 +7,140 @@ Home
 
 {% block section %}
 <div class="container-fluid home">
-    <div class="row align-items-center">
-        <div class="col-md-2"></div>
-        <div class="col-md-7">
-                {% for new in berita_object %}
-                    <div class="list-berita">                      
-                        <ul class="list-unstyled">
-                            <li><h5>{{new.get_sport_display}}</h5></li>
-                            <li><a href="#">See All</a></li>
-                        </ul>                            
-                        <img src="{{new.media}}" alt="">
-                        <h2><a href="#">{{new.judul}}</a></h2>
-                        {{new.createdat}}
-                    </div>
-                {% endfor %}
+    <div class="row">
+        <div class="col-md-2">
+            <div class="quick-links left">
+                <ul class="list-unstyled">
+                    <li><h6>Quick Links</h6></li>
+                    <li>
+                        <p><a href="#">Premiere League</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">Fantasy Basketball: Sign Up</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">ESPN CricInfo</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">NBA Trade Machine</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">College Bowl Schedule</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">ESPN Daily Podcast</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">NFL Playoff Machine</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">NBA Trade Machine</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">MLB Winter Meetings</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="quick-links left">
+                <ul class="list-unstyled">
+                    <li><h6>Customise ESPN</h6></li>
+                    <li>
+                        <a href="#">Sign Up</a>
+                    </li>
+                    <li>
+                        <a href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="quick-links left">
+                <ul class="list-unstyled">
+                    <li><h6>ESPN Sites</h6></li>
+                    <li>
+                        <p><a href="#">ESPN Deportes</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">The Undefeated</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">espnW</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">ESPNFC</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">X Games</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">SEC Network</a></p>
+                    </li>
+                </ul>
+            </div>       
+            <div class="quick-links left">
+                <ul class="list-unstyled">
+                    <li><h6>ESPN Apps</h6></li>
+                    <li>
+                        <p><a href="#">ESPN</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">ESPN Fantasy</a></p>
+                    </li>
+                </ul>
+            </div> 
+            <div class="quick-links left">
+                <ul class="list-unstyled">
+                    <li><h6>Follow ESPN</h6></li>
+                    <li>
+                        <ul class="list-unstyled follow">
+                            <li><img src="https://lh6.googleusercontent.com/proxy/i7qQ2MAClfmtAib-xTNGEQIddyKTu5paY_YaVRm1vw1o0GDHP9KpOIFNkvslWusbFud5uBcPtP7IsrSwuDhgRy9yV106K5l9OJgdEs8WKJp4ycuNAAzueeSNrnoi236wg799yii3c6H8s7gVBYStkko=s0-d" alt=""></li>
+                            <li><p><a href="#">Facebook</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="list-unstyled follow">
+                            <li><img src="https://upload.wikimedia.org/wikipedia/id/thumb/9/9f/Twitter_bird_logo_2012.svg/944px-Twitter_bird_logo_2012.svg.png" alt=""></li>
+                            <li><p><a href="#">Twitter</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="list-unstyled follow">
+                            <li><img src="https://image.flaticon.com/icons/svg/87/87390.svg" alt=""></li>
+                            <li><p><a href="#">Instagram</a></p></li>
+                        </ul>
+                    </li>
+            </ul>
+        </div> 
+    
+
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-7">
+            {% for new in berita_object %}
+                <div class="list-berita">                
+                    <ul class="list-unstyled">
+                        <li><a class="list-berita-head" href="{% url 'espn:sport' new.sport %}"><h5>{{new.get_sport_display}}</h5></a></li>
+                        <li><a href="#">See All</a></li>
+                    </ul>
+                    <div class="list-berita-border">                              
+                        <img src="{{new.media}}" alt="">
+                        <h4><a href="{% url 'espn:peritem' new.sport new.id %}">{{new.judul}}</a></h4>
+                        {{ new.createdat|timesince:nau }}
+                    </div>    
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-3">
+            <div class="quick-links left">
+                <ul class="list-unstyled">
+                    <li><h6>Top Headlines</h6></li>
+                    <li><p><a href="#">headline 1</a></p></li>
+                    <li><p><a href="#">headline 2</a></p></li>
+                    <li><p><a href="#">headline 3</a></p></li>
+                    <li><p><a href="#">headline 4</a></p></li>
+                    <li><p><a href="#">headline 5</a></p></li>
+                    <li><p><a href="#">headline 6</a></p></li>
+                    <li><p><a href="#">headline 7</a></p></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 

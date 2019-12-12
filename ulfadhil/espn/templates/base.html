@@ -17,14 +17,29 @@
         <div class="container-fluid header-espn">
             <div class="row align-items-center">
                 <div class="col-md-2 alpha-tech">
-                    <a href="{% url 'index' %}"><img src="https://diskingdom.com/wp-content/uploads/2016/01/image-39.png" alt=""></a>
+                    <a href="{% url 'espn:index' %}"><img src="https://diskingdom.com/wp-content/uploads/2016/01/image-39.png" alt=""></a>
                 </div>
                 <div class="col-md-7">
                     <div class="home-header-nav">
                         <ul class="list-unstyled home-header-nav__list">
-                            <li><a href="{% url 'football' %}">Football</a></li>
-                            <li><a href="{% url 'nba' %}">NBA</a></li>
-                            <li><a href="{% url 'nfl' %}">NFL</a></li>
+                            <!-- <li><button class="dropbtn"><a href="#"> Dropdown</a></button></li> -->
+                            <li>
+                                <div class="dropdown">
+                                    <a href= "#" class="dropbtn">Football</a>
+                                    <div class="dropdown-content">
+                                    <a href="#">Scores</a>
+                                    <a href="#">Fixture</a>
+                                    <a href="#">Transfers</a>
+                                    <a href="#">Teams</a>
+                                    <a href="#">League & Cups</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Fantasy</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- <li><a href="{% url 'espn:sport' 'Football' %}">Football</a></li> -->
+                            <li><a href="{% url 'espn:sport' 'NBA' %}">NBA</a></li>
+                            <li><a href="{% url 'espn:sport' 'NFL' %}">NFL</a></li>
                             <li><a href="#">Cricket</a></li>
                             <li><a href="#">Rugby</a></li>
                             <li><a href="#">Golf</a></li>
@@ -51,6 +66,6 @@
             {% endblock %}
         </div>
     </section>
-    <script src="% static 'espn/js/bootstrap.min.js' %"></script>
+    <!-- <script src="{% static 'espn/js/bootstrap.min.js' %}"></script> -->
 </body>
 </html>
