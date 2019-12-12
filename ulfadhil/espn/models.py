@@ -1,13 +1,18 @@
 from django.db import models
+from django.core.files.storage import FileSystemStorage
+
+fs = FileSystemStorage(location='/media/')
 
 # Create your models here.
 
 class Berita(models.Model):
     judul = models.CharField(max_length=50)
+    # link = judul[:15]
+    # link = '-'.join(link.split(' ').lower)
     createdat = models.DateTimeField(auto_now_add=True)
     # ini jadi pertanyaan ngehandle media uploadannya laopo
     # sementara placeholder pakai link nanti jadi upload, nanti jadi handle upload video
-    media = models.CharField(max_length=50)
+    media = models.ImageField(storage=fs)
     content = models.CharField(max_length=1000)
     SPORT = (('Football','Football'),('NBA','National Basketball Association'),('NFL','National Football League'))
     sport = models.CharField(max_length=11, choices=SPORT)

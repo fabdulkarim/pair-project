@@ -12,7 +12,7 @@ body {
 ==============HEADER==============
 ================================== */
 
-header {
+header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-snapchat-logo-snap-inc-snapchat-cliparts.jpg;
     width: 100%;
     /* padding: 10px; */
     box-shadow: 0px 3px 6px #C1C3C736;
@@ -53,6 +53,7 @@ header {
     display: block;
     text-decoration: none;
     color: white;
+    font-weight: medium;
 }
 
 .home-header-nav__list .titik{
@@ -79,16 +80,102 @@ header {
     background-color: #ececec;
 }
 
+.left {
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 0;
+    /* margin-left: 15px; */
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* .socmed {
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 0;
+    margin-top: 10px;
+    padding: 10px;
+} */
+
+.follow li {
+    display: inline-block
+}
+
+.follow li img {
+    width: 25px;
+}
+
+.follow 
+    font-size: 13px;
+    text-align: bottom;
+
+/* .quick-links {
+    padding-top: 5px
+} */
+
+.quick-links h6 {
+    font-size: 13px;
+    /* margin-bottom: 10px; */
+    margin-top: 10px;
+    /* padding-top: 20px; */
+}
+
+/* .quick-links ul li img {
+    width: 25px;
+} */
+
+.quick-links ul li p {
+    font-size: 13px;
+    text-align: bottom;
+}
+
+/* .quick-links li {
+    border-bottom: solid 1px #ececec;
+} */
+
 .list-berita {
     background-color: white;
-    margin: 10px;
+    margin-top: 10px;
     padding: 20px;
     border-radius: 10px;
+}
+
+.list-berita-head {
+    text-decoration: none;
+    color: black;
+}
+
+.list-berita-head:hover {
+    color: blue;
+}
+
+.list-berita-border {
+    border: 1px solid #ececec;
+    border-radius: 10px;  
+    box-shadow: 0px 3px 6px #C1C3C736; 
 }
 
 .list-berita img {
     width: 100%;
     border-radius: 10px;
+}
+
+.list-berita ul li a {
+    text-decoration: none;
+}
+
+.list-berita h4 {
+    margin-top: 10px;
+}
+
+.list-berita h4 a {
+    color: black;
+    text-decoration: none;
+}
+
+.list-berita h4 a:hover {
+    color: rgb(28, 145, 255);
+    /* transition-delay: 0.5s ease; */
 }
 
 .top-news {

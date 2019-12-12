@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+News Details
+{% endblock %}
+
+{% block section %}
+<div class="container-fluid home">
+    <div class="row news-detail">
+        <div class="col-md-5"></div>
+        <div class="col-md-7">
+            {% for new in berita_object %}
+            <div class="list-berita">                
+                <div class="list-berita-border">
+                    <p>
+                        tes
+                    </p>                              
+                    <h4><a href="#">{{baru.judul}}</a></h4>
+                    {{baru.createdat}}
+                    <img src="{{baru.media}}" alt="">
+                    <p>{{baru.content}}</p>
+
+                </div>    
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
