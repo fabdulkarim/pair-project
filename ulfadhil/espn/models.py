@@ -67,5 +67,5 @@ class Match(models.Model):
     done = models.IntegerField()
 
     def __str__(self):
-        return (f"{self.takes_time}    {self.home_team_id}    {self.ht_score} -- {self.at_score}    {self.away_team_id}")
+        return str(self.takes_time) + str(self.home_team_id) + str(self.ht_score) + "--" + str(self.at_score) + str(self.away_team_id)
     #pass
