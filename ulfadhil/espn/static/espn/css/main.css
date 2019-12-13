@@ -14,7 +14,6 @@ body {
 
 header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-snapchat-logo-snap-inc-snapchat-cliparts.jpg;
     width: 100%;
-    /* padding: 10px; */
     box-shadow: 0px 3px 6px #C1C3C736;
     background-color: black;
     position: fixed;
@@ -75,7 +74,6 @@ header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-s
 .foot {
     background-color: white;
     border-bottom: 1px solid #ececec;
-    /* margin-top: 15px; */
 }
 
 .follow-foot h6{
@@ -85,20 +83,17 @@ header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-s
 }
 
 footer {
-    /* margin-top: 50px; */
-    /* padding-top: 30px; */
+    padding-bottom: 0 !important;
+    padding: 30px;
+    background-color: #ececec;
 }
 
 .logo-espn {
-    /* margin: 10px; */
     border-right: 1px solid #ececec;
 }
 
 .logo-espn img {
     width: 50%;
-    /* align-content: right; */
-    /* display: table; */
-    /* margin-right: 0; */
 }
 
 .foot-2 li {
@@ -128,7 +123,6 @@ footer {
     background-color: white;
     border-radius: 10px;
     margin-right: 0;
-    /* margin-left: 15px; */
     margin-top: 10px;
     padding: 10px;
 }
@@ -146,14 +140,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* .socmed {
-    background-color: white;
-    border-radius: 10px;
-    margin-right: 0;
-    margin-top: 10px;
-    padding: 10px;
-} */
-
 .follow li {
     display: inline-block
 }
@@ -166,29 +152,16 @@ footer {
     font-size: 13px;
     text-align: bottom;
 }
-/* .quick-links {
-    padding-top: 5px
-} */
 
 .quick-links h6 {
     font-size: 13px;
-    /* margin-bottom: 10px; */
     margin-top: 10px;
-    /* padding-top: 20px; */
 }
-
-/* .quick-links ul li img {
-    width: 25px;
-} */
 
 .quick-links ul li p {
     font-size: 13px;
     text-align: bottom;
 }
-
-/* .quick-links li {
-    border-bottom: solid 1px #ececec;
-} */
 
 
 .list-berita {
@@ -223,10 +196,6 @@ footer {
     margin-left: 0;
     margin-right: 0;
 }
-
-/* .seeall {
-    margin-left: 550px;
-} */
 
 .list-berita ul li a {
     text-decoration: none;
@@ -284,11 +253,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* .tim h4{
-    display: table;
-    margin-right: auto;
-    margin-left: auto;
-} */
 
 .tim-a {
     text-align: right;
@@ -297,9 +261,6 @@ footer {
 .tim-b {
     text-align: left;
 }
-/* .tim{
-    text-align: center;
-} */
 
 .tim ul li {
     display: inline-block;
@@ -309,10 +270,6 @@ footer {
 .tim ul li img {
    height: 40px;; 
 }
-
-/* .tim ul li h3 {
-    font-size: 1px;
-} */
 
 .ft{
     padding-top: 10px;
@@ -357,7 +314,6 @@ footer {
 .news-detail img {
     width: 100%;
     margin-bottom: 50px;
-    /* border-radius: 10px; */
 }
 
 .content-detail {
@@ -385,23 +341,17 @@ footer {
 .dropbtn {
     background-color: black;
     color: white;
-    /* padding: 16px;
-    font-size: 16px;
-    border: none; */
     cursor: pointer;
   }
   
   .dropdown {
     position: relative;
-    /* display: inline-block; */
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    /* min-width: 160px; */
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
     width: 250px;
   }
@@ -412,7 +362,6 @@ footer {
     text-decoration: none;
     display: block;
     height: 40px;
-    /* width: 100px; */
   }
   
   .dropdown-content a:hover {background-color: #ececec}
@@ -421,6 +370,3 @@ footer {
     display: block;
   }
   
-  /* .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  } */
