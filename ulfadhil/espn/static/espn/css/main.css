@@ -72,6 +72,50 @@ header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-s
 ================home=================
 ===================================== */
 
+.foot {
+    background-color: white;
+    border-bottom: 1px solid #ececec;
+    /* margin-top: 15px; */
+}
+
+.follow-foot h6{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px #ececec solid;
+}
+
+footer {
+    /* margin-top: 50px; */
+    /* padding-top: 30px; */
+}
+
+.logo-espn {
+    /* margin: 10px; */
+    border-right: 1px solid #ececec;
+}
+
+.logo-espn img {
+    width: 50%;
+    /* align-content: right; */
+    /* display: table; */
+    /* margin-right: 0; */
+}
+
+.foot-2 li {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.copyright p {
+    margin-left: 15px;
+    color: grey;
+    font-size: 13px;;
+}
+/* =====================================
+================home=================
+===================================== */
+
 .content-section {
     padding-top: 42px;
 }
@@ -118,10 +162,10 @@ header {https://i7.pngguru.com/preview/262/743/679/social-media-computer-icons-s
     width: 25px;
 }
 
-.follow 
+.follow {
     font-size: 13px;
     text-align: bottom;
-
+}
 /* .quick-links {
     padding-top: 5px
 } */
